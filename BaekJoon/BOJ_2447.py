@@ -1,7 +1,7 @@
 # 별 찍기 - 10
 
-n = int(input())
-board = [[0 for i in range(n)] for i in range(n)]
+N = int(input())
+board = [[0 for i in range(N)] for i in range(N)]
 
 # 별 찍는 함수
 def draw_star(n):
@@ -18,10 +18,20 @@ def draw_star(n):
         for j in range(3):
             if i == 1 and j == 1:
                 continue
+            # a = n//3
             for k in range(a):
-                board[a] 
+                # 핵심 아이디어
+                board[a*i+k][a*j:a*(j+1)] = board[k][:a]
 
+draw_star(N)
 
+for i in board:
+    for j in i:
+        if j:
+            print('*', end='')
+        else:
+            print(' ', end='')
+    print()
 
 
 '''
