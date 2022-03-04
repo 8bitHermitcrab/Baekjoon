@@ -10,7 +10,18 @@ for p, c in zip(participant, completion):
 
 print(participant[-1])
 
-    
+# ===========================================
+def solution(participant, completion):
+    # participant : 참가자, completion : 완주자, return : 미완주자
+    participant.sort()
+    completion.sort()
+
+    for p, c in zip(participant, completion):
+        if p != c:
+            return p
+    return participant[-1]
+
+# ==========================================
 
 
 
@@ -92,6 +103,9 @@ for k in answer:
         print(f'answer[{k}] = {answer[k]}')
         # answer[kiki] = -1
         # return k
+
+
+https://hjp845.tistory.com/54
 
 https://mungto.tistory.com/193
 
