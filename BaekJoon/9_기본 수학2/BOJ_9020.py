@@ -22,3 +22,6 @@ def Goldbach():
             B += 1
 
 Goldbach()
+
+
+# https://yoonsang-it.tistory.com/31
