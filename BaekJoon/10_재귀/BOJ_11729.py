@@ -16,16 +16,16 @@ hanoi(int(input()), 1, 2, 3)
 
 # print(f'move = {move}')
 
+'''
 for row in move:
     # print(f'row = {row}')
     for i in row:
         r = ' '.join(str(i))
         # print(f'r = {r}')
-        result = '\n'.join(r)
+'''
 
 print(len(move))
-print(result)
-#print('\n'.join([' '.join(str(i) for i in row) for row in move]))
+print('\n'.join([' '.join(str(i) for i in row) for row in move]))
 
 
 '''
