@@ -16,3 +16,5 @@ for i in kg_cm:
         if i[0] < j[0] and i[1] < j[1]:
             rank += 1
     print(rank, end=' ')
+
+# https://claude-u.tistory.com/122
