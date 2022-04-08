@@ -1,11 +1,12 @@
 # 수 정렬하기 2
 
+import sys
 
-n = int(input())
+n = int(sys.stdin.readline())
 num_list = []
 
 for _ in range(n):
-    num_list(int(input())
+    num_list.append(int(sys.stdin.readline()))
 
 num_list.sort()
 
