@@ -1,25 +1,29 @@
 # 체육복
 # https://programmers.co.kr/learn/courses/30/lessons/42862
 
-# n = 5
-# lost = [2, 4]
-# reserve = [1, 3, 5]
+n = 5
+lost = [2, 4]
+reserve = [1, 3, 5]
 # 답 : 5
 
-# n = 5
-# lost = [2, 4]
-# reserve = [3]
-# 답 : 4
+lost.sort()
+reserve.sort()
 
-# n = 3
-# lost = [3]
-# reserve = [1]
-# 답 : 2
+def solution(n, lost, reserve):
+    # _reserve = [r for r in reserve if r not in lost]
+    # _lost = [l for l in lost if l not in reserve]
+    _reserve =  list(set(reserve) - set(lost)) 
+    _lost =  list(set(lost) - set(reserve)) 
+    for r in _reserve:
+        f = r - 1
+        b = r + 1
+        if f in _lost:
+            _lost.remove(f)
+        elif b in _lost:
+            _lost.remove(b)
+    answer = n - len(_lost)
+    return answer
 
-# n = 5
-# lost = [3]
-# reserve = [3]
-# 답 = 4
 
 '''
 # 전체 학생의 수 n
@@ -92,39 +96,13 @@ for key, value in n_dict.items():
 
 # print(n_dict)
 print(answer)
-'''
+
 
 
 # 채점 결과
 # 정확성: 75.0
 # 합계: 75.0 / 100.0
 
-
-
-n = 5
-lost = [3, 4]
-reserve = [2, 3]
-# {1:1, 2:1, 3:1, 4:0, 5:1}
-# 답 = 4
-
-
-# lost 중복제거
-lost_set = set(lost) - set(reserve)
-# reserve 중복제거
-reserve_set = set(reserve) - set(lost)
-
-# print(lost_set)
-# print(reserve_set)
-
-answer = 0
-
-'''
-for r in reserve:
-    if r not in lost:
-'''
-
-lost.sort()
-reserve.sort()
 
 # reserve 중복 제거 리스트
 uniq_reserve = [r for r in reserve if r not in lost]
@@ -146,19 +124,6 @@ for r in reserve:
 answer = n - len(uniq_lost)
 print(n - len(uniq_lost))
 print(answer)
-
-'''
-def solution(n, lost, reserve):
-    _reserve = [r for r in reserve if r not in lost]
-    _lost = [l for l in lost if l not in reserve]
-    for r in _reserve:
-        f = r - 1
-        b = r + 1
-        if f in _lost:
-            _lost.remove(f)
-        elif b in _lost:
-            _lost.remove(b)
-    return n - len(_lost)
 '''
 
 #https://velog.io/@ckr3453/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EC%B2%B4%EC%9C%A1%EB%B3%B5
