@@ -10,3 +10,5 @@ n_list.sort(reverse=True)
 
 for i in n_list:
     print(i, end='')
+
+# https://jiwon-coding.tistory.com/9
