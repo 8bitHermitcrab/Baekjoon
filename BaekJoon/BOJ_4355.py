@@ -1,6 +1,82 @@
 # 서로소
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import sys, time
 
 # start_t = time.time()
@@ -46,10 +122,22 @@ for i in range(10):
     if n == 0:
         break
     
-print(Euler(n), sep='\n')
+# print(Euler(n), sep='\n')
 
-# end_t = time.time() - start_t
-# print(end_t)
+def solve(v_size, s, cnt):
+    if s == v_size:
+        if cnt != 0:
+            return
+        if cnt % 2 != 0:
+            result -= union()
+        else:
+            result += union()
+        return
+    e.append(v[s])
+    solve(v_size, s+1, cnt+1)
+    e.pop()
+    solve(v_size, s+1, cnt)
+
 
 
 
