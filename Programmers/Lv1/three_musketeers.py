@@ -6,11 +6,15 @@ def solution(number):
         if n == len(number):
             if len(answer) == r:
                 temp = [i for i in answer]
+                print(f'temp = {temp}')
                 comb_list.append(temp)
+                print(f'comb_list = {comb_list}')
             return
         answer.append(number[n])
+        print(f'answer = {answer}')
         ncr(n+1, answer, r)
         answer.pop()
+        print(f'answer = {answer}')
         ncr(n+1, answer, r)
     
     ncr(0, [], 3)
