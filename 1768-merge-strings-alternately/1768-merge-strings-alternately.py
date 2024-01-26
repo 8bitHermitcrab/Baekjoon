@@ -1,8 +1,10 @@
 class Solution:
     def mergeAlternately(self, word1: str, word2: str) -> str:
         ans = ''
-        size1, size2 = len(word1), len(word2)
-        i, j = 0, 0
+        size1 = len(word1)
+        size2 = len(word2)
+        i = 0
+        j = 0
         
         while i + j < size1 + size2:
             if i < size1:
