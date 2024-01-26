@@ -5,7 +5,6 @@ class Solution:
         size2 = len(word2)
         i = 0
         j = 0
-        
         while i + j < size1 + size2:
             if i < size1:
                 ans += word1[i]
