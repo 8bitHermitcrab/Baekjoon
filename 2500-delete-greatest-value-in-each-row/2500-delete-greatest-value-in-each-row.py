@@ -1,5 +1,3 @@
-import heapq
-
 class Solution:
     def deleteGreatestValue(self, grid: List[List[int]]) -> int:
         for row in grid:
